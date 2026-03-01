@@ -1,0 +1,60 @@
+---
+// components/CaseStudies.astro
+
+interface CaseStudy {
+  category: string;
+  categoryColor: string;
+  title: string;
+  description: string;
+  tags: string[];
+  borderHover: string;
+}
+
+const cases: CaseStudy[] = [
+  {
+    category: 'Automação & Escala',
+    categoryColor: 'text-emerald-500',
+    title: 'Biipp.com.br',
+    description:
+      'Desenvolvimento completo de plataforma para afiliados, transformando fluxos manuais em uma operação automatizada e escalável.',
+    tags: ['Django', 'PostgreSQL', 'Docker', 'Celery', 'Redis', 'Stripe'],
+    borderHover: 'hover:border-emerald-500/30',
+  },
+  {
+    category: 'IA & Consultoria',
+    categoryColor: 'text-cyan-500',
+    title: 'Integração de IA (Ollama/RAG)',
+    description:
+      'Criação de assistentes inteligentes que utilizam a base de dados interna da empresa para fornecer respostas rápidas, direcionadas e insights estratégicos.',
+    tags: ['Web', 'Ollama', 'Langchain','Vector DB', 'Logstash', 'ElasticSearch'],
+    borderHover: 'hover:border-cyan-500/30',
+  },
+  
+];
+---
+
+<section id="casos" class="py-24 px-6 bg-[#080808]">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold mb-16 text-center">Soluções Reais</h2>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+      {
+        cases.map((caseStudy) => (
+          <div class={`group relative glass rounded-3xl overflow-hidden border border-white/5 transition ${caseStudy.borderHover}`}>
+            <div class="p-10">
+              <span class={`${caseStudy.categoryColor} font-bold text-xs tracking-widest uppercase mb-4 block`}>
+                {caseStudy.category}
+              </span>
+              <h4 class="text-2xl font-bold mb-4">{caseStudy.title}</h4>
+              <p class="text-gray-400 mb-8 leading-relaxed">{caseStudy.description}</p>
+              <div class="flex gap-3 flex-wrap">
+                {caseStudy.tags.map((tag) => (
+                  <span class="px-3 py-1 bg-white/5 rounded-md text-[10px] text-gray-300 uppercase">{tag}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

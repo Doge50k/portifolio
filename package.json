@@ -1,0 +1,19 @@
+{
+  "name": "elias-portfolio",
+  "version": "1.0.0",
+  "description": "Portfólio profissional - Soluções Digitais & IA",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.18.0"
+  },
+  "devDependencies": {
+    "@astrojs/tailwind": "*",
+    "tailwindcss": "^3.4.0"
+  }
+}
