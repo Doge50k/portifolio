@@ -1,241 +1,156 @@
-# Portfólio Profissional - Elias | Soluções Digitais & IA
+<div align="center">
 
-Landing page moderna e responsiva desenvolvida com **Astro** e **Tailwind CSS**.
+# 🚀 Portfólio Profissional
 
-## 📋 Estrutura do Projeto
+### Transformando problemas em soluções através da tecnologia
 
-```
-portifolio/
-├── src/
-│   ├── pages/
-│   │   └── index.astro          # Página principal da landing page
-│   ├── components/
-│   │   ├── Navbar.astro         # Barra de navegação fixa
-│   │   ├── Hero.astro           # Seção de apresentação com CTA
-│   │   ├── Services.astro       # Seção de serviços (3 cards)
-│   │   ├── CaseStudies.astro    # Seção de casos de uso
-│   │   └── Footer.astro         # Rodapé com links e informações
-│   ├── layouts/
-│   │   └── Layout.astro         # Layout principal (meta, fonts, estrutura HTML)
-│   └── styles/
-│       └── global.css           # Estilos globais e variáveis personalizadas
-├── public/                       # Arquivos estáticos (imagens, ícones, etc)
-├── astro.config.mjs             # Configuração do Astro com Tailwind
-├── tailwind.config.mjs          # Temas e extensões personalizadas
-├── tsconfig.json                # Configuração TypeScript
-├── package.json                 # Dependências do projeto
-└── README.md                    # Este arquivo
-```
+*Landing page moderna que destaca expertise em desenvolvimento web e inteligência artificial*
 
-## 🚀 Início Rápido
+[![Astro](https://img.shields.io/badge/Astro-FF5D01?style=for-the-badge&logo=astro&logoColor=white)](https://astro.build)
+[![Tailwind](https://img.shields.io/badge/Tailwind-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com)
+[![Open Source](https://img.shields.io/badge/Open%20Source-%E2%9D%A4-red?style=for-the-badge)](https://github.com)
 
-### Instalação
+</div>
+
+---
+
+## ✨ Sobre o Projeto
+
+Este é meu portfólio profissional - uma landing page minimalista e moderna que apresenta meus serviços de desenvolvimento de sistemas web personalizados e soluções com inteligência artificial.
+
+**O que você vai encontrar:**
+- 🎯 Apresentação clara dos meus serviços
+- 💼 Casos de uso reais de projetos desenvolvidos
+- 🎨 Design limpo com tema dark e efeitos glassmorphism
+- 📱 Totalmente responsivo
+- ⚡ Performance otimizada com Astro
+
+## 🎨 Preview
+
+O site apresenta:
+- **Hero Section** - Apresentação impactante com call-to-action
+- **Serviços** - Sistemas Web, IA Aplicada e Infraestrutura
+- **Portfolio** - Projetos reais desenvolvidos
+- **Contato** - Links diretos para redes sociais
+
+## 🛠️ Tecnologias
+
+Este projeto utiliza tecnologias modernas para garantir performance e manutenibilidade:
+
+- **[Astro](https://astro.build)** - Framework web ultrarrápido
+- **[Tailwind CSS](https://tailwindcss.com)** - Estilização utilitária
+- **[Font Awesome](https://fontawesome.com)** - Ícones profissionais
+- **[Google Fonts](https://fonts.google.com)** - Tipografia Plus Jakarta Sans
+
+## 🚀 Como Usar
+
+### Executar Localmente
 
 ```bash
-# Clone ou navegue até o diretório do projeto
+# Clone o repositório
+git clone https://github.com/Doge50k/portifolio.git
+
+# Entre na pasta
 cd portifolio
 
 # Instale as dependências
 npm install
-```
 
-### Desenvolvimento
-
-Inicie o servidor de desenvolvimento com:
-
-```bash
+# Inicie o servidor de desenvolvimento
 npm run dev
 ```
 
-O site estará disponível em `http://localhost:3000`.
+Acesse `http://localhost:4321` no seu navegador.
 
-### Construção para Produção
+### Build para Produção
 
 ```bash
 npm run build
-```
-
-Os arquivos otimizados serão gerados em `dist/`.
-
-### Preview da Build
-
-```bash
 npm run preview
 ```
 
-## 🎨 Componentes
+## 📂 Estrutura Simplificada
 
-### Navbar
-Barra de navegação fixa no topo com:
-- Logo e branding
-- Links de navegação
-- Botão CTA "Contratar"
-
-**Arquivo:** `src/components/Navbar.astro`
-
-### Hero
-Seção de destaque com:
-- Título principal com gradiente
-- Descrição/pitch
-- Botão CTA principal
-- Badge de disponibilidade
-- Imagem de perfil
-
-**Arquivo:** `src/components/Hero.astro`
-
-### Services
-Grid com 3 cards de serviços:
-1. **Sistemas Web Sob Medida** - Python + Django
-2. **Inteligência Artificial Aplicada** - LLMs
-3. **Infraestrutura que não para** - Docker
-
-**Arquivo:** `src/components/Services.astro`
-
-### CaseStudies
-Grid com 2 casos reais de sucesso:
-- **Biipp** - Automação de afiliados
-- **Integração de IA** - RAG e LLMs
-
-**Arquivo:** `src/components/CaseStudies.astro`
-
-### Footer
-Rodapé com:
-- Informações da empresa
-- Links de redes sociais
-- Copyright
-
-**Arquivo:** `src/components/Footer.astro`
-
-## 🎯 Seções da Página
-
-| Seção | ID | Descrição |
-|-------|----|----|
-| **Início** | #inicio | Apresentação com imagem de perfil |
-| **Serviços** | #servicos | Grid com 3 serviços principais |
-| **Casos de Uso** | #casos | Portfolio com 2 projetos reais |
-
-## 🛠️ Stack Tecnológico
-
-- **Framework:** Astro (SSG/SSR estático)
-- **Estilos:** Tailwind CSS 3.4.0
-- **Fontes:** Plus Jakarta Sans (Google Fonts)
-- **Ícones:** Font Awesome 6.4.0
-- **Linguagem:** Astro + HTML
-
-## 🎨 Design System
-
-### Cores
-- **Fundo:** `#050505` (dark-bg)
-- **Secundário:** `#080808` (dark-secondary)
-- **Primária:** `#10B981` (emerald-500)
-- **Destaque:** `#06B6D4` (cyan-500)
-
-### Componentes Reutilizáveis (CSS)
-
-#### `.glass`
-Efeito glassmorphism com blur e transparência.
-
-```css
-.glass {
-  @apply bg-white/3 backdrop-blur-[10px] border border-white/5;
-}
+```
+portifolio/
+├── src/
+│   ├── components/     # Componentes reutilizáveis
+│   ├── layouts/        # Layout base da página
+│   ├── pages/          # Página principal
+│   └── styles/         # Estilos globais
+├── public/
+│   └── images/         # Imagens e assets
+└── package.json
 ```
 
-#### `.text-gradient`
-Gradient de texto em verde → ciano.
+## 🎨 Características do Design
 
-```css
-.text-gradient {
-  @apply bg-gradient-to-r from-emerald-500 to-cyan-500 bg-clip-text text-transparent;
-}
-```
+- **Tema Dark Moderno** - Fundo `#050505` com acentos em verde esmeralda
+- **Glassmorphism** - Cards com efeito de vidro e blur
+- **Gradientes** - Textos e botões com gradientes suaves
+- **Animações** - Transições fluidas e efeitos hover
+- **Responsivo** - Adaptado para todos os tamanhos de tela
 
-#### `.btn-primary`
-Botão CTA com gradient e shadow.
+## 🌟 Personalizar para Seu Uso
 
-```css
-.btn-primary {
-  @apply bg-gradient-to-r from-emerald-500 to-emerald-600 shadow-lg shadow-emerald-500/30;
-}
-```
+Quer usar este template? É simples:
 
-#### `.card-hover`
-Animação de hover para cards.
+1. **Imagem de perfil**: Adicione em `public/images/perfil.png`
+2. **Informações pessoais**: Edite os componentes em `src/components/`
+3. **Cores**: Ajuste em `tailwind.config.mjs` e `src/styles/global.css`
+4. **Conteúdo**: Modifique textos, serviços e projetos nos componentes
 
-```css
-.card-hover {
-  @apply transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40;
-}
-```
+## 📦 Deploy Rápido
 
-#### `.blob`
-Shapes decorativas blurradas.
+## 📦 Deploy Rápido
 
-```css
-.blob {
-  @apply absolute w-[300px] h-[300px] rounded-full blur-[80px] -z-10;
-}
-```
+Faça deploy em minutos:
 
-## 📝 Personalização
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start)
 
-### Alterar Informações de Contato
-
-No componente **Navbar** e **Hero**, altere:
-```astro
-href="https://wa.me/seu-numero"
-```
-
-### Alterar Email de Contato
-
-No componente **Footer**:
-```astro
-href="mailto:seu-email@dominio.com"
-```
-
-### Mudar CNPJ
-
-No componente **Footer**, atualize:
-```html
-<p class="text-gray-600 text-[10px] mt-4 font-bold tracking-widest uppercase">CNPJ: 00.000.000/0001-00</p>
-```
-
-### Adicionar Redes Sociais
-
-Links no **Footer**:
-```astro
-<a href="seu-link-linkedin" class="hover:text-emerald-500 transition">
-  <i class="fab fa-linkedin"></i>
-</a>
-```
-
-### Mudar Imagem de Perfil
-
-No componente **Hero**:
-```astro
-<img src="seu-url-imagem" alt="Seu Nome" class="..." />
-```
-
-## 🚀 Deploy
-
-A landing page pode ser deployada em:
-- **Vercel:** [vercel.com](https://vercel.com)
-- **Netlify:** [netlify.com](https://netlify.com)
-- **GitHub Pages:** Com `astro build` → push `dist/`
-
-### Deploy Vercel (Recomendado)
-
+**Ou use GitHub Pages:**
 ```bash
-npm install -g vercel
-vercel
+npm run build
+# Faça deploy da pasta dist/
 ```
 
-## 📚 Recursos
+## 💡 Por que Astro?
 
-- [Documentação Astro](https://docs.astro.build)
-- [Tailwind CSS](https://tailwindcss.com)
-- [Font Awesome Icons](https://fontawesome.com)
+- ⚡ **Ultra-rápido** - Zero JS por padrão
+- 🎯 **SEO otimizado** - HTML estático gerado
+- 🔧 **Simples de manter** - Componentes isolados
+- 📦 **Build pequeno** - Menos JS = mais velocidade
+
+## 👨‍💻 Sobre o Autor
+
+**Elias Alves** - Desenvolvedor Full Stack & Especialista em IA
+
+Apaixonado por criar soluções que transformam problemas em oportunidades de negócio. Especializado em:
+- Desenvolvimento de sistemas web personalizados (Python/Django)
+- Integração de IA em processos empresariais
+- Arquitetura de software escalável
+
+### 🔗 Conecte-se Comigo
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/elias-alves21/)
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Doge50k)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:devstudioelias@gmail.com)
+
+---
 
 ## 📄 Licença
 
-Todos os direitos reservados © 2026 Elias.
+Este projeto está sob licença aberta. Sinta-se livre para usar como template para seu próprio portfólio!
+
+**Se este projeto te ajudou, considere dar uma ⭐**
+
+---
+
+<div align="center">
+
+Feito com ❤️ por [Elias Alves](https://github.com/Doge50k)
+
+*Transformando código em soluções desde 2024*
+
+</div>
