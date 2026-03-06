@@ -1,0 +1,43 @@
+---
+// components/About.astro
+
+interface Tech {
+  name: string;
+  icon: string;
+}
+
+const technologies: Tech[] = [
+  { name: 'Python', icon: 'fab fa-python' },
+  { name: 'FastAPI', icon: 'fas fa-bolt' },
+  { name: 'PostgreSQL', icon: 'fas fa-database' },
+  { name: 'Docker', icon: 'fab fa-docker' },
+  { name: 'REST API', icon: 'fas fa-code' },
+  { name: 'Django', icon: 'fab fa-python' },
+  { name: 'Linux', icon: 'fab fa-linux' },
+];
+---
+
+<section id="sobre" class="py-6 px-6 border-b border-white/5">
+  <div class="max-w-6xl mx-auto">
+    <!-- Intro em uma linha -->
+    <div class="mb-12 text-center">
+      <p class="text-lg text-gray-300 leading-relaxed inline-block">
+        Bacharel em <span class="text-emerald-400 font-semibold">Sistemas de Informação</span> • 
+        <span class="text-cyan-400 font-semibold">2 anos</span> de experiência • 
+        Especialista em <span class="text-emerald-400 font-semibold">Python & Arquitetura de Dados</span>
+      </p>
+    </div>
+
+    <!-- Tech Stack Horizontal -->
+    <div class="flex flex-wrap justify-center items-center gap-4">
+      {
+        technologies.map((tech) => (
+          <div class="glass rounded-lg px-5 py-3 border border-white/5 hover:border-emerald-500/30 hover:scale-105 transition text-sm font-medium text-gray-300 flex items-center gap-2">
+            <i class={`${tech.icon} text-emerald-400`}></i>
+            {tech.name}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
