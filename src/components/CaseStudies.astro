@@ -8,6 +8,8 @@ interface CaseStudy {
   description: string;
   tags: string[];
   borderHover: string;
+  image: string; // Nome da imagem em /public/images/
+  featured?: boolean; // Badge de projeto destaque
 }
 
 const cases: CaseStudy[] = [
@@ -19,6 +21,8 @@ const cases: CaseStudy[] = [
       'Desenvolvimento completo de plataforma para afiliados, transformando fluxos manuais em uma operação automatizada e escalável.',
     tags: ['Django', 'PostgreSQL', 'Docker', 'Celery', 'Redis', 'Stripe'],
     borderHover: 'hover:border-emerald-500/30',
+    image: 'biipp-screenshot.png',
+    featured: true,
   },
   {
     category: 'IA & Consultoria',
@@ -28,6 +32,27 @@ const cases: CaseStudy[] = [
       'Criação de assistentes inteligentes que utilizam a base de dados interna da empresa para fornecer respostas rápidas, direcionadas e insights estratégicos.',
     tags: ['Web', 'Ollama', 'Langchain','Vector DB', 'Logstash', 'ElasticSearch'],
     borderHover: 'hover:border-cyan-500/30',
+    image: 'ia-ollama-screenshot.jpeg',
+  },
+  {
+    category: 'Análise de Dados',
+    categoryColor: 'text-blue-500',
+    title: 'Sistema de Insights Baseado em Dados',
+    description:
+      'Solução que automatiza extração, tratamento e visualização de dados. Dashboard executivo com alertas inteligentes e recomendações baseadas em ML para otimizar operações.',
+    tags: ['Streamlit', 'Python', 'Pandas', 'FastAPI', 'PostgreSQL', 'TensorFlow', 'Redis'],
+    borderHover: 'hover:border-blue-500/30',
+    image: 'data-insights-screenshot.jpeg',
+  },
+  {
+    category: 'Automação Robótica',
+    categoryColor: 'text-purple-500',
+    title: 'Automação End-to-End com RPA Escalável',
+    description:
+      'Pipeline automático que lê emails, extrai dados, valida em sistema legado, gera relatórios e envia para stakeholders. Tratamento de exceções robusto, logging detalhado e recovery automático em caso de falha.',
+    tags: ['Selenium', 'Python', 'Apache Airflow', 'PostgreSQL', 'FastAPI', 'Docker'],
+    borderHover: 'hover:border-purple-500/30',
+    image: 'rpa-automation-screenshot.png', 
   },
   
 ];
@@ -40,6 +65,24 @@ const cases: CaseStudy[] = [
       {
         cases.map((caseStudy) => (
           <div class={`group relative glass rounded-3xl overflow-hidden border border-white/5 transition ${caseStudy.borderHover}`}>
+            {/* Screenshot do Projeto */}
+            <div class="relative overflow-hidden bg-gradient-to-br from-gray-900 to-black">
+              <img
+                src={`/images/${caseStudy.image}`}
+                alt={`Screenshot do projeto ${caseStudy.title}`}
+                class="w-full h-64 object-cover object-top opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+              />
+              {/* Badge de Destaque */}
+              {caseStudy.featured && (
+                <div class="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full text-white text-[10px] font-bold tracking-wider uppercase shadow-lg">
+                  ⭐ Projeto Destaque
+                </div>
+              )}
+              {/* Overlay gradiente */}
+              <div class="absolute inset-0 bg-gradient-to-t from-[#080808] via-transparent to-transparent opacity-60"></div>
+            </div>
+
+            {/* Conteúdo */}
             <div class="p-10">
               <span class={`${caseStudy.categoryColor} font-bold text-xs tracking-widest uppercase mb-4 block`}>
                 {caseStudy.category}
