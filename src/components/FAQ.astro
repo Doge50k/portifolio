@@ -1,0 +1,75 @@
+---
+// components/FAQ.astro
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+const faqs: FAQItem[] = [
+  {
+    question: 'Aceita projetos pequenos ou só grandes contratos?',
+    answer: 'Trabalho com projetos de todos os tamanhos. O importante é que a solução faça sentido para o seu negócio.',
+  },
+  {
+    question: 'Consigo ter o sistema rodando rapidamente (MVP)?',
+    answer: 'Sim! Posso entregar uma versão funcional mínima (MVP) em poucas semanas para você validar a solução com seus usuários antes de investir no sistema completo.',
+  },
+  {
+    question: 'Tem CNPJ? Emite nota fiscal?',
+    answer: 'Sim! CNPJ 64.665.143/0001-03 ativo. Emito nota fiscal normalmente para todos os projetos.',
+  },
+  {
+    question: 'E se eu não souber explicar exatamente o que preciso?',
+    answer: 'Normal! A maioria dos clientes chega assim. Faço um Discovery para entender sua dor e traduzir em solução técnica. Você fala do problema, eu desenho a solução.',
+  },
+];
+---
+
+<section id="faq" class="py-24 px-6 bg-[#080808]">
+  <div class="max-w-4xl mx-auto">
+    <!-- Título -->
+    <div class="mb-16 text-center">
+      <h2 class="text-4xl font-extrabold mb-4">Perguntas Frequentes</h2>
+      <p class="text-gray-400">Tire suas dúvidas antes de começar</p>
+    </div>
+
+    <!-- FAQ Items -->
+    <div class="space-y-0">
+      {
+        faqs.map((faq, index) => (
+          <div class="border-b border-white/10 last:border-b-0">
+            <details class="group">
+              <summary class="flex items-center justify-between py-5 cursor-pointer list-none hover:text-emerald-400 transition">
+                <h3 class="text-base font-medium text-gray-200 group-hover:text-emerald-400 transition pr-4">
+                  {faq.question}
+                </h3>
+                <div class="flex-shrink-0 text-gray-400 group-hover:text-emerald-400 group-open:rotate-180 transition-all">
+                  <i class="fas fa-chevron-down text-xs"></i>
+                </div>
+              </summary>
+              <div class="pb-5 pt-1 pr-8">
+                <p class="text-gray-400 leading-relaxed text-sm">{faq.answer}</p>
+              </div>
+            </details>
+          </div>
+        ))
+      }
+    </div>
+
+    <!-- CTA Final -->
+    <div class="mt-12 text-center pt-8 border-t border-white/10">
+      <p class="text-gray-300 mb-6">
+        Ainda tem dúvidas? <span class="text-emerald-400 font-semibold">Vamos conversar!</span>
+      </p>
+      <a
+        href="https://wa.me/5594991583532?text=Olá!%20Tenho%20algumas%20dúvidas%20sobre%20desenvolvimento%20de%20sistemas."
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn-primary text-white px-10 py-4 rounded-xl font-bold inline-block hover:scale-105 transition"
+      >
+        Falar no WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
